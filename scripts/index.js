@@ -11,6 +11,9 @@ const jokeHolder = document.querySelector('[data-container');
 const buttonPress = document.querySelector('[data-button]')
 
 // When the user clicks the button, show a joke/fortune.
+// When the user clicks the button again, show the next fortune.
+// When the user clicks the button, and you are at the end of the array, start back from the beginning of the array.
+
 let i = 0;
 
 function nextJoke () {
