@@ -9,20 +9,25 @@ const funnyJokes = [
 
 const jokeHolder = document.querySelector('[data-container');
 const buttonForward = document.querySelector('[data-button-next]');
-const  buttonBackward = document.querySelector('[data-button-prev]');
+const buttonBackward = document.querySelector('[data-button-prev]');
+const buttonRandom = document.querySelector('[data-button-rand]');
 
 // When the user clicks the button, show a joke/fortune.
 // When the user clicks the button again, show the next fortune.
 // When the user clicks the button, and you are at the end of the array, start back from the beginning of the array.
 
 let i = -1;
-
 function nextJoke () {
+    if (i === funnyJokes.length - 1) {
+        i = -1;
+    }
     i += 1
     jokeHolder.textContent = funnyJokes[i];
     if (i === funnyJokes.length - 1) {
         i = -1;
     }
+    console.log(i);
+
 }
 function prevJoke () {
     i -= 1
@@ -30,9 +35,20 @@ function prevJoke () {
         i = (funnyJokes.length - 1);
     }
     jokeHolder.textContent = funnyJokes[i];
+    console.log(i);
+
 }
 
-buttonForward.addEventListener('click', nextJoke)
-buttonBackward.addEventListener('click', prevJoke)
+function randJoke () {
+    let rando = Math.floor(Math.random() * Math.floor(funnyJokes.length));
+    jokeHolder.textContent = funnyJokes[rando];
+    i = rando;
+    console.log(i);
+
+}
+
+buttonForward.addEventListener('click', nextJoke);
+buttonBackward.addEventListener('click', prevJoke);
+buttonRandom.addEventListener('click', randJoke);
 
 
