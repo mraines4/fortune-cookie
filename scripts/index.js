@@ -23,9 +23,7 @@ function nextJoke () {
     }
     i += 1
     jokeHolder.textContent = funnyJokes[i];
-    if (i === funnyJokes.length - 1) {
-        i = -1;
-    }
+
     console.log(i);
 
 }
