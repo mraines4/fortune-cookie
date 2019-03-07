@@ -8,24 +8,32 @@ const funnyJokes = [
 ]
 
 const jokeHolder = document.querySelector('[data-container');
-const buttonPress = document.querySelector('[data-button]')
+const buttonForward = document.querySelector('[data-button-next]');
+const  buttonBackward = document.querySelector('[data-button-prev]');
 
 // When the user clicks the button, show a joke/fortune.
 // When the user clicks the button again, show the next fortune.
 // When the user clicks the button, and you are at the end of the array, start back from the beginning of the array.
 
-let i = 0;
+let i = -1;
 
 function nextJoke () {
+    i += 1
     jokeHolder.textContent = funnyJokes[i];
-    i += 1;
-    if (i === funnyJokes.length) {
-        i = 0;
+    if (i === funnyJokes.length - 1) {
+        i = -1;
     }
 }
+function prevJoke () {
+    i -= 1
+    if ( i < 0) {
+        i = (funnyJokes.length - 1);
+    }
+    jokeHolder.textContent = funnyJokes[i];
+}
 
-buttonPress.addEventListener('click', nextJoke)
-
+buttonForward.addEventListener('click', nextJoke)
+buttonBackward.addEventListener('click', prevJoke)
 
 // When the user clicks the button again, show the next fortune.
 
