@@ -18,7 +18,13 @@ html, body {
     padding-top: 20%;
 }
 
-h1 {
-    font-size: 40px;
+.jokes {
+    font-size: 30px;
+    color: midnightblue;
+}
+
+.button {
+    font-size: 20px;
+    color: cornflowerblue;
 }
 
