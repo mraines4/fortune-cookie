@@ -35,10 +35,4 @@ function prevJoke () {
 buttonForward.addEventListener('click', nextJoke)
 buttonBackward.addEventListener('click', prevJoke)
 
-// When the user clicks the button again, show the next fortune.
-
-
-
-// When the user clicks the button, and you are at the end of the array, start back from the beginning of the array.
-
 
