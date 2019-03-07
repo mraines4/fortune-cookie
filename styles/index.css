@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Chewy', cursive;
+    background-image: url(https://previews.123rf.com/images/9dreamstudio/9dreamstudio1710/9dreamstudio171003939/88532221-chinese-fortune-cookie-with-prediction-on-stone-background-top-view-mock-up-.jpg);
+    background-size: cover;
+}
+
+.overall {
+    text-align: center;
+    padding-top: 20%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
